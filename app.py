@@ -17,7 +17,7 @@ except Exception as e:
 
 if st.session_state.get('authentication_status'):
     authenticator.logout()
-    st.write(f'Welcome *{st.session_state.get("name")}*')
+    st.write(f'Welcome *{st.session_state.get("email")}*')
     st.title('Some content')
 elif st.session_state.get('authentication_status') is False:
     st.error('Username/password is incorrect')

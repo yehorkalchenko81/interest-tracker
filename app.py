@@ -6,18 +6,21 @@ st.title('Login version, test')
 
 config = {
     'credentials': {
-        'usersnames': {
+        'usernames': {
             'yhkal': {
                 'email': '1', 
                 'name': 'Yehor Kalchenko',
-                'password': stauth.Hasher(['1']).generate()[0]
+                'password': '1'
             }
         }
     }
 }
 
 authenticator = stauth.Authenticate(
-    config['users']
+    config['credentials'],
+    'cookie_name',         # будь-яка назва
+    'signature_key',       # будь-який секретний ключ
+    cookie_expiry_days=30  # опціонально
 )
 
 try:

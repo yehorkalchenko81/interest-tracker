@@ -1,0 +1,13 @@
+cookie:
+  expiry_days: 30
+  key: "key"
+  name: "name"
+credentials:
+  usernames:
+    jsmith:
+      email: "jsmith@gmail.com"
+      first_name: "John"
+      last_name: "Smith"
+      logged_in: False # Will be managed automatically
+      password: "abc" # Will be hashed automatically
+      

@@ -4,7 +4,7 @@ import streamlit_authenticator as stauth
 
 st.title('Login version, test')
 
-config = {'users': {'email': ['1'], 'password': ['1']}}
+config = {'credentials': {'usersnames': {'jsmith': {'email': ['1'], 'password': [stauth.Hasher(['1']).generate()[0]]}}}}
 
 authenticator = stauth.Authenticate(
     config['users']

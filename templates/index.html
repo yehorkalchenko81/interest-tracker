@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Main Page</title>
-    </head>
-    <body>
-        <h1>This is Main Page</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content -%}
+<p>We support:</p>
+<ul>
+    {% for s in services -%}
+    <li>{{s}}</li>
+    {% endfor -%}
+</ul>
+{% endblock %}

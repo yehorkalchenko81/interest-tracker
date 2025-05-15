@@ -1,202 +1,57 @@
-/* Загальний скидання стилів */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --primary-color: #bb86fc;
-  --secondary-color: #03dac6;
-  --highlight-color: #ff4081;
-  --card-bg: #1f1f1f;
-  --border-color: #2c2c2c;
-  --radius: 12px;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  --transition: 0.3s ease;
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+.form-login {
+  max-width: 400px;
+  margin: 80px auto;
   padding: 30px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
-  font-weight: 600;
+.form-login p {
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-/* Контейнер */
-.container {
-  width: 100%;
-  max-width: 900px;
-  background: var(--card-bg);
-  padding: 40px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
-}
-
-.container:hover {
-  border-color: var(--primary-color);
-}
-
-.container h1 {
-  text-align: center;
-}
-
-/* Картки */
-.card {
-  background: #1c1c1c;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid var(--border-color);
-  border-left: 5px solid var(--highlight-color);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-/* Кнопки */
-button {
-  padding: 12px 24px;
-  background-color: var(--primary-color);
-  color: #000;
-  border: none;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: var(--transition);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-button:hover {
-  background-color: #9c5be5;
-  transform: scale(1.05);
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 5px var(--primary-color);
-}
-
-/* Форми */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select,
-textarea {
-  width: 100%;
-  padding: 15px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  background: #2b2b2b;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 5px var(--primary-color);
-}
-
-label {
-  font-weight: 500;
-  margin-bottom: 5px;
+.form-login label {
   display: block;
-  color: var(--text-color);
-  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
-/* Анімації */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.form-login input[type="email"],
+.form-login input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.container {
-  animation: fadeInUp 0.6s ease-out;
+.form-login input[type="email"]:focus,
+.form-login input[type="password"]:focus {
+  outline: none;
+  background-color: #353535;
+  box-shadow: 0 0 0 2px #4a90e2;
 }
 
-/* Тінь для карток */
-.card, .container {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+.form-login input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #4a90e2, #007acc);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* Загальні стилі для тексту */
-p, span, a {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  transition: color 0.3s ease;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  color: var(--primary-color);
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-footer a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer a:hover {
-  color: var(--highlight-color);
-}
-
-/* Плавна прокрутка */
-html {
-  scroll-behavior: smooth;
+.form-login input[type="submit"]:hover {
+  background: linear-gradient(135deg, #5aa6ff, #1490ff);
 }
